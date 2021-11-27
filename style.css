@@ -23,8 +23,8 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 header .nav_menu {
@@ -290,5 +290,54 @@ header a:hover {
 
 .container_sm .sm_3 {
   margin-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .main_section {
+    min-height: 100vh;
+  }
+  .main_section .flex_content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1281) {
+  body {
+    padding-top: 0;
+    padding-left: 272px;
+  }
+  header {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  header .nav_menu {
+    overflow: hidden;
+    background-color: #bd5d38;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    width: 272px;
+    height: 100vh;
+    cursor: pointer;
+  }
+  header #links {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */
