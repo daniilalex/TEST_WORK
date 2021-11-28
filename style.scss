@@ -34,10 +34,8 @@ header {
         left: 0;
         z-index: 1;
         cursor: pointer;
+        padding: 0 16px;
 
-        #side_nav {
-            padding: 0 16px;
-        }
 
         .first {
             height: 60px;
@@ -51,9 +49,15 @@ header {
             padding-top: 12px;
         }
 
-        #links {
+        .main_photo {
             display: none;
         }
+
+        #links {
+            display: none;
+
+        }
+
 
 
         .burger_list {
@@ -69,14 +73,19 @@ header {
             padding: 0;
         }
 
+        .selected {
+            color: white;
+        }
+
         a {
             font-family: 'Mulish', sans-serif, 'Roboto', sans-serif, 'Saira Extra Condensed', sans-serif;
             color: rgba(255, 255, 255, 0.55);
-            padding: 8px 16px;
+            padding: 8px 0;
             text-decoration: none;
             font-size: 16px;
             display: block;
             text-transform: uppercase;
+            transition: all 0.5s ease-out;
 
         }
 
@@ -93,42 +102,42 @@ header {
             border-radius: 5px;
             opacity: 0.2;
 
-            .burger_lines {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+        }
 
-                span {
-                    width: 25px;
-                    height: 3px;
-                    background-color: rgb(255, 255, 255);
-                    margin: 3px;
+        .burger_lines {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-                }
+            span {
+                width: 25px;
+                height: 3px;
+                background-color: rgb(255, 255, 255);
+                margin: 3px;
+
             }
         }
     }
+}
 
-    .selected {
-        color: white;
-    }
 
-    a:hover {
-        color: white;
 
-    }
-
+a:hover {
+    color: white;
 
 }
+
+
+
+
 
 // content part for mb 
 
 .container_sm {
-    margin-top: 70px;
     max-width: 767px;
     margin: auto;
     background-color: white;
-    transform: translateY(50px);
+
 
     .main_section {
         display: flex;
@@ -143,7 +152,7 @@ header {
                 text-transform: uppercase;
                 font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
                 font-weight: 700;
-                font-size: calc(27.6px + 5.7vw);
+                font-size: calc(17.5px + 5.7vw);
                 color: #343a40;
                 margin-bottom: 0;
 
@@ -167,9 +176,13 @@ header {
                 line-height: 36px;
                 font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-                a {
+                .email {
                     color: #bd5d38;
                     text-decoration: underline;
+                }
+
+                .email:hover {
+                    color: rgb(150, 43, 4);
                 }
 
 
@@ -218,19 +231,29 @@ header {
                     svg {
                         margin-right: 5px;
                         height: 16px;
-                        transform: translateZ(10px);
+
                     }
 
                 }
 
             }
-        }
 
-        .social_icons {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-right: 20px;
+            .social_icons {
+                display: block;
+                margin-right: 20px;
+
+                a {
+                    margin-left: 20px;
+                }
+
+                .social_svg:hover {
+                    background-color: #ffb192;
+                    border-radius: 100%;
+                    fill: #bd5d38;
+                }
+
+
+            }
         }
 
 
@@ -277,19 +300,100 @@ header {
 
 }
 
-@media screen and (min-width:768px) {
-    
-           .main_section {
-            min-height: 100vh;
 
-            .flex_content {
-                flex-direction: row;
+// view fot a tablet
+
+
+@media screen and (min-width:768px) {
+
+    .main_section {
+        min-height: 100vh;
+
+        .flex_content {
+            flex-direction: row;
+        }
+    }
+    .container_sm .main_section .main_section_content .skills_inline {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+// view for a desktop
+
+@media screen and (min-width:1281px) {
+
+    header {
+
+        .nav_menu {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #bd5d38;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            cursor: pointer;
+            padding: 0 16px;
+            height: 100vh;
+            width: 272px;
+            text-align: center;
+            padding-top: 88px;
+
+            .main_photo {
+                display: block;
+                width: 160px;
+                height: 160px;
+                border-radius: 80%;
+                border: 8px solid rgba(255, 255, 255, 0.2);
+            }
+
+            .first {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                margin: auto auto 0;
+                margin-top: 60px;
+            }
+
+            .name_span {
+                display: none;
+            }
+
+            a {
+                padding: 8px;
+            }
+
+            .selected {
+                color: rgb(255, 255, 255)
+            }
+
+            .selected:hover {
+                color: white;
+            }
+
+            button.burger {
+                display: none;
+            }
+
+            #links {
+                display: block;
+
             }
         }
-        
+
+
+    }
+
+    .social_icons {
+        display: block;
     }
 
 
-@media screen and (min-width:1281) {
+
+
 
 }
