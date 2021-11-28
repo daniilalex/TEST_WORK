@@ -13,53 +13,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Saira+Extra+Condensed&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish&family=Roboto:wght@100&family=Saira+Extra+Condensed&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/burger.css">
+    
 </head>
 
 <body>
-    <!-- mobile first, tablet look -->
+    <!-- nav bar  -->
     <header>
-        <!-- <nav>
-            <div class="navbar">
-                <div class="container nav-container">
-                    <input class="checkbox" type="checkbox"  data-cke-saved-name="" name="" id="" />
-                    <div class="hamburger-lines">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <span class="line line3"></span>
-                    </div>
-                    <div class="logo">
-                        <h1></h1>
-                    </div>
-                    <div class="menu-items">
-                        <li><a href="#about" class="selected">about</a></li>
-                    <li><a href="#exprerience" class="burger_link">experience</a></li>
-                    <li><a href="#education" class="burger_link">education</a></li>
-                    <li><a href="#skills" class="burger_link">skills</a></li>
-                    <li><a href="#interests" class="burger_link">interests</a></li>
-                    <li><a href="#awards" class="burger_link">awards</a></li>
-                    </div>
-                </div>
-            </div>
-        </nav> -->
-        <nav class="nav_menu side_nav" id="side_nav">
-            <a href="#home" class="first">Clarence Taylor</a>
-            <div class="links" id="links">
-                <ul class="burger_list">
-                    <li><a href="#about" class="selected">about</a></li>
-                    <li><a href="#exprerience" class="burger_link">experience</a></li>
-                    <li><a href="#education" class="burger_link">education</a></li>
-                    <li><a href="#skills" class="burger_link">skills</a></li>
-                    <li><a href="#interests" class="burger_link">interests</a></li>
-                    <li><a href="#awards" class="burger_link">awards</a></li>
-                </ul>
-            </div>
+        
+        <nav class="nav_menu">
+            <a href="#home" class="first"><span class="name_span">Clarence Taylor</span>
+            <span><img class="main_photo" src="https://startbootstrap.github.io/startbootstrap-resume/assets/img/profile.jpg" alt="photo"</span></a>
             <button javascript:void(0); class="burger" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
                 <span class="burger_lines">
@@ -68,13 +32,24 @@
                     <span></span>
                 </span>
             </button>
+            <div class="links" id="links">
+                <ul class="burger_list">
+                    <li><a href="#about" class="selected burger_link">about</a></li>
+                    <li><a href="#exprerience" class="burger_link">experience</a></li>
+                    <li><a href="#education" class="burger_link">education</a></li>
+                    <li><a href="#skills" class="burger_link">skills</a></li>
+                    <li><a href="#interests" class="burger_link">interests</a></li>
+                    <li><a href="#awards" class="burger_link">awards</a></li>
+                </ul>
+            </div>
+            
 
         </nav>
     </header>
 
     <!-- page content -->
     <main>
-        <div class="container_sm">
+        <section class="container_sm">
             <section class="main_section" id="about">
                 <div class="main_section_content">
                     <h1 class="main_h1">Clarence
@@ -83,7 +58,7 @@
                     <div class="subheading_main">
                         3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
                         <a href="#" class="email">NAME@EMAIL.COM</a>
-                    </div>
+                </div>
                     <p class="main_p">
                         I am experienced in leveraging agile frameworks to provide a robust synopsis for high level
                         overviews. Iterative approaches to corporate strategy foster collaborative thinking to further
@@ -406,6 +381,7 @@
                     </ul>
                 </div>
             </section>
+        </section>
     </main>
 
 
