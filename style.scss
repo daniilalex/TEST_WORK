@@ -89,6 +89,12 @@ header {
 
         }
 
+
+        a:hover {
+            color: white;
+
+        }
+
         button.burger {
             width: 50px;
             display: block;
@@ -122,10 +128,8 @@ header {
 
 
 
-a:hover {
-    color: white;
 
-}
+
 
 
 
@@ -134,15 +138,16 @@ a:hover {
 // content part for mb 
 
 .container_sm {
-    max-width: 767px;
     margin: auto;
     background-color: white;
 
 
     .main_section {
+        max-width:1200px;
         display: flex;
         align-items: center;
         padding: 60px 16px;
+        transform: translateY(60px);
 
         .main_section_content {
             width: 100%;
@@ -193,7 +198,7 @@ a:hover {
             }
 
             .main_p {
-                font-size: 18.4px;
+                font-size: 19.4px;
                 font-weight: 400;
                 line-height: 27px;
                 margin-bottom: 48px;
@@ -204,7 +209,7 @@ a:hover {
                 flex-wrap: wrap;
                 list-style-type: none;
                 margin: 0;
-                padding-left: 11px;
+                padding: 0;
                 margin-bottom: 16px;
 
                 .skill_logo {
@@ -214,13 +219,16 @@ a:hover {
                 .skills_inline_item {
                     margin-right: 10px;
                     margin-bottom: 10px;
+
+
                 }
             }
 
             .workflow {
                 list-style-type: none;
-                margin-left: 40px;
+                margin-left: 15px;
                 padding-left: 0;
+                width: 91%;
 
                 li {
                     display: list-item;
@@ -240,9 +248,9 @@ a:hover {
 
             .social_icons {
                 display: block;
-                margin-right: 20px;
 
-                a {
+
+                a:not(:first-child) {
                     margin-left: 20px;
                 }
 
@@ -301,7 +309,7 @@ a:hover {
 }
 
 
-// view fot a tablet
+// view fot the tablet
 
 
 @media screen and (min-width:768px) {
@@ -313,13 +321,14 @@ a:hover {
             flex-direction: row;
         }
     }
+
     .container_sm .main_section .main_section_content .skills_inline {
         display: flex;
         flex-wrap: nowrap;
     }
 }
 
-// view for a desktop
+// view for the desktop
 
 @media screen and (min-width:1281px) {
 
@@ -338,7 +347,7 @@ a:hover {
             z-index: 1;
             cursor: pointer;
             padding: 0 16px;
-            height: 100vh;
+            height: 100%;
             width: 272px;
             text-align: center;
             padding-top: 88px;
@@ -367,14 +376,6 @@ a:hover {
                 padding: 8px;
             }
 
-            .selected {
-                color: rgb(255, 255, 255)
-            }
-
-            .selected:hover {
-                color: white;
-            }
-
             button.burger {
                 display: none;
             }
@@ -385,8 +386,51 @@ a:hover {
             }
         }
 
-
     }
+
+    main {
+
+        margin-left: 300px;
+
+        .container_sm {
+            width: 100%;
+            padding: 10px;
+            margin: 0 auto;
+
+            .main_section {
+                width: 1200px;
+                padding: 75px 16px;
+
+                .main_section_content {
+
+                    .main_h1 {
+
+                        font-size: 96px;
+                        line-height: 1;
+                        margin-bottom: 0;
+                    }
+                    .sm1 {
+
+                        font-size: 56px;
+                        margin-bottom: 48px;
+
+                    }
+
+                    .flex_content .flex_grow_1 .sm4 {
+                        
+                            font-size: 32px;
+                        }
+                }
+
+                
+            }
+        }
+
+            
+            
+        }
+    }
+    
 
     .social_icons {
         display: block;
@@ -396,4 +440,3 @@ a:hover {
 
 
 
-}
