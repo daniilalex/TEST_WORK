@@ -7,10 +7,6 @@ body {
   color: #6c757d;
 }
 
-body .flex_content_span {
-  color: #bd5d38;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,7 +127,6 @@ header .nav_menu .burger_lines span {
 }
 
 .container_sm .main_section {
-  max-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,6 +229,7 @@ header .nav_menu .burger_lines span {
 }
 
 .container_sm .main_section .main_section_content .workflow li svg {
+  fill: #6c757d;
   margin-right: 5px;
   height: 16px;
 }
@@ -242,18 +238,17 @@ header .nav_menu .burger_lines span {
   display: block;
 }
 
-.container_sm .main_section .main_section_content .social_icons a:not(:first-child) {
-  margin-left: 20px;
-}
-
 .container_sm .main_section .main_section_content .social_icons .social_svg:hover {
-  background-color: #ffb192;
+  background-color: #bd5d38;
   border-radius: 100%;
   fill: #bd5d38;
 }
 
+.container_sm .main_section .main_section_content .social_icons a:not(:first-child) {
+  margin-left: 20px;
+}
+
 .container_sm .sm_hr {
-  border: 0;
   opacity: 0.25;
 }
 
@@ -268,6 +263,10 @@ header .nav_menu .burger_lines span {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.container_sm .flex_content .flex_content_span {
+  color: #bd5d38;
 }
 
 .container_sm .flex_content .flex_grow_1 {
@@ -301,7 +300,8 @@ header .nav_menu .burger_lines span {
 
 @media screen and (min-width: 768px) {
   .main_section {
-    min-height: 100vh;
+    max-width: 1200px;
+    min-height: 110vh;
   }
   .main_section .flex_content {
     -webkit-box-orient: horizontal;
@@ -342,10 +342,9 @@ header .nav_menu .burger_lines span {
     z-index: 1;
     cursor: pointer;
     padding: 0 16px;
-    height: 100%;
+    height: 135vh;
     width: 272px;
     text-align: center;
-    padding-top: 88px;
   }
   header .nav_menu .main_photo {
     display: block;
@@ -373,18 +372,18 @@ header .nav_menu .burger_lines span {
   header .nav_menu a {
     padding: 8px;
   }
-  header .nav_menu button.burger {
-    display: none;
-  }
   header .nav_menu #links {
     display: block;
   }
+  header .nav_menu button.burger {
+    display: none;
+  }
   main {
+    width: 100%;
     margin-left: 300px;
   }
   main .container_sm {
     width: 100%;
-    padding: 10px;
     margin: 0 auto;
   }
   main .container_sm .main_section {
