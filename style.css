@@ -87,6 +87,10 @@ header .nav_menu a {
   transition: all 0.5s ease-out;
 }
 
+header .nav_menu a:hover {
+  color: white;
+}
+
 header .nav_menu button.burger {
   width: 50px;
   display: block;
@@ -121,17 +125,13 @@ header .nav_menu .burger_lines span {
   margin: 3px;
 }
 
-a:hover {
-  color: white;
-}
-
 .container_sm {
-  max-width: 767px;
   margin: auto;
   background-color: white;
 }
 
 .container_sm .main_section {
+  max-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,6 +139,8 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 60px 16px;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
 }
 
 .container_sm .main_section .main_section_content {
@@ -192,7 +194,7 @@ a:hover {
 }
 
 .container_sm .main_section .main_section_content .main_p {
-  font-size: 18.4px;
+  font-size: 19.4px;
   font-weight: 400;
   line-height: 27px;
   margin-bottom: 48px;
@@ -206,7 +208,7 @@ a:hover {
       flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
-  padding-left: 11px;
+  padding: 0;
   margin-bottom: 16px;
 }
 
@@ -221,8 +223,9 @@ a:hover {
 
 .container_sm .main_section .main_section_content .workflow {
   list-style-type: none;
-  margin-left: 40px;
+  margin-left: 15px;
   padding-left: 0;
+  width: 91%;
 }
 
 .container_sm .main_section .main_section_content .workflow li {
@@ -237,10 +240,9 @@ a:hover {
 
 .container_sm .main_section .main_section_content .social_icons {
   display: block;
-  margin-right: 20px;
 }
 
-.container_sm .main_section .main_section_content .social_icons a {
+.container_sm .main_section .main_section_content .social_icons a:not(:first-child) {
   margin-left: 20px;
 }
 
@@ -340,7 +342,7 @@ a:hover {
     z-index: 1;
     cursor: pointer;
     padding: 0 16px;
-    height: 100vh;
+    height: 100%;
     width: 272px;
     text-align: center;
     padding-top: 88px;
@@ -371,20 +373,39 @@ a:hover {
   header .nav_menu a {
     padding: 8px;
   }
-  header .nav_menu .selected {
-    color: white;
-  }
-  header .nav_menu .selected:hover {
-    color: white;
-  }
   header .nav_menu button.burger {
     display: none;
   }
   header .nav_menu #links {
     display: block;
   }
-  .social_icons {
-    display: block;
+  main {
+    margin-left: 300px;
   }
+  main .container_sm {
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+  main .container_sm .main_section {
+    width: 1200px;
+    padding: 75px 16px;
+  }
+  main .container_sm .main_section .main_section_content .main_h1 {
+    font-size: 96px;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  main .container_sm .main_section .main_section_content .sm1 {
+    font-size: 56px;
+    margin-bottom: 48px;
+  }
+  main .container_sm .main_section .main_section_content .flex_content .flex_grow_1 .sm4 {
+    font-size: 32px;
+  }
+}
+
+.social_icons {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
