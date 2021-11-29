@@ -342,7 +342,7 @@ header .nav_menu .burger_lines span {
     z-index: 1;
     cursor: pointer;
     padding: 0 16px;
-    height: 135vh;
+    height: 100%;
     width: 272px;
     text-align: center;
   }
@@ -389,6 +389,7 @@ header .nav_menu .burger_lines span {
   main .container_sm .main_section {
     width: 1200px;
     padding: 75px 16px;
+    min-height: 0;
   }
   main .container_sm .main_section .main_section_content .main_h1 {
     font-size: 96px;
